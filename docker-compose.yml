@@ -1,0 +1,54 @@
+version: '3'
+services:
+  api:
+    image: datascientest/fastapi:1.0.0
+    ports:
+      - "8080:8000"
+    networks:
+      - test-network
+
+  authentication-test:
+    build:
+      context: .
+      dockerfile: Dockerfile_auth
+    networks:
+      - test-network
+    depends_on:
+      - api
+    environment:
+      - LOG=1
+    volumes:
+      - ./logs:/docker_exam/logs
+
+  authorization-test:
+    build:
+      context: .
+      dockerfile: Dockerfile_autho
+    networks:
+      - test-network
+    depends_on:
+      - api
+    environment:
+      - LOG=1
+    volumes:
+      - ./logs:/docker_exam/logs
+
+  content-analysis-test:
+    build:
+      context: .
+      dockerfile: Dockerfile_cont
+    networks:
+      - test-network
+    depends_on:
+      - api
+    environment:
+      - LOG=1
+    volumes:
+      - ./logs:/docker_exam/logs
+
+networks:
+  test-network:
+    driver: bridge
+
+volumes:
+  logs:

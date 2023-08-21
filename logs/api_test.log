@@ -1,0 +1,426 @@
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="alice"
+| password="wonderland"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="bob"
+| password="builder"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="clementine"
+| password="mandarine"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Content test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+| version="v1"
+| sentiment: "positive" (0.5994)
+
+==>  SUCCESS
+
+============================
+    Content test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+| version="v2"
+| sentiment: "positive" (0.5994)
+
+==>  SUCCESS
+
+============================
+    Content test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+| version="v1"
+| sentiment: "negative" (-0.3612)
+
+==>  SUCCESS
+
+============================
+    Content test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+| version="v2"
+| sentiment: "negative" (-0.3612)
+
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="alice"
+| password="wonderland"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="bob"
+| password="builder"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="clementine"
+| password="mandarine"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="alice"
+| password="wonderland"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v1"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authorization test
+============================
+
+| username="bob"
+| password="builder"
+| sentence="you got this"
+| version="v2"
+expected result = 200
+actual result = 403
+==>  FAILURE
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="alice"
+| password="wonderland"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="bob"
+| password="builder"
+expected result = 200
+actual result = 200
+==>  SUCCESS
+
+============================
+    Authentication test
+============================
+request done at "/permissions"
+| username="clementine"
+| password="mandarine"
+expected result = 200
+actual result = 403
+==>  FAILURE

@@ -1,0 +1,6 @@
+FROM python:3
+WORKDIR /docker_exam
+COPY content.py /docker_exam
+RUN apt-get update && apt-get install -y python3-pip
+RUN pip install requests
+CMD ["python", "content.py"]

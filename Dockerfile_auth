@@ -1,0 +1,5 @@
+FROM python:3
+WORKDIR /docker_exam
+COPY authentication.py /docker_exam
+RUN pip install requests
+CMD ["python", "authentication.py"]
