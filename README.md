@@ -13,14 +13,14 @@ The entry points of our API:
 The /status entry point simply checks that the API is working. The /permissions entry point allows someone, identified by a username and a password to see which version of the template they have access to. Finally the last two take a sentence as input, check that the user is identified, check that the user has the right to use this template and if so, return the sentiment score: -1 is negative; +1 is positive.
 
 The following tests have been applied:
-Authentication
+- Authentication: 
 In this first test, we are going to check that the identification logic works well. To do this, we will need to make GET requests on the /permissions entry point. We know that two users exist alice and bob and their passwords are wonderland and builder. We'll try a 3rd test with a password that doesn't work: clementine and mandarine.
 The first two requests should return a 200 error code while the third should return a 403 error code.
 
-Authorization
+- Authorization: 
 In this second test, we will verify that our user authorization logic is working properly. We know that bob only has access to v1 while alice has access to both versions. For each of the users, we will make a query on the /v1/sentiment and /v2/sentiment entry points: we must then provide the arguments username, password and sentence which contains the sentence to be analyzed.
 
-Content
+- Content:
 In this last test, we check that the API works as it should. We will test the following sentences with the alice account:
 life is beautiful
 that sucks
